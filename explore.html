@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Skills | SkillBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body class="explore-body">
+    <header class="explore-navbar">
+
+        <a href="index.html" class="logo">
+            Skill<span>Bridge.</span>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html" class="active">Explore Skills</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <a href="auth.html" class="signup-btn" id="exploreAccountLink">
+            Get Started
+        </a>
+    </header>
+
+    <main class="explore-main">
+        <section class="explore-hero">
+            <span class="section-label">DISCOVER YOUR NEXT OPPORTUNITY</span>
+            <h1>
+                Explore Skills.
+                <span>Meet Your Match.</span>
+            </h1>
+            <p>
+                Find talented people, discover new skills,
+                and exchange knowledge with our community.
+            </p>
+        </section>
+
+        <section class="explore-search">
+            <div class="explore-search-input">
+                <span>⌕</span>
+                <input type="text" id="exploreSearch" placeholder="Search skills, people...">
+            </div>
+            <button id="exploreSearchBtn">Search</button>
+        </section>
+
+        <section class="category-section">
+            <div class="category-heading">
+                <h2>Browse Categories</h2>
+                <p>Find what interests you.</p>
+            </div>
+            <div class="category-list" id="categoryList">
+                <button class="category-btn active" data-category="All">
+                    All Skills
+                </button>
+                <button class="category-btn" data-category="Technology">
+                    Technology
+                </button>
+                <button class="category-btn" data-category="Design">
+                    Design
+                </button>
+                <button class="category-btn" data-category="Languages">
+                    Languages
+                </button>
+                <button class="category-btn" data-category="Creative">
+                    Creative
+                </button>
+                <button class="category-btn" data-category="Business">
+                    Business
+                </button>
+            </div>
+        </section>
+
+        <section class="explore-results">
+            <div class="results-heading">
+                <div>
+                    <span class="section-label">COMMUNITY MARKETPLACE</span>
+                    <h2>People You Can Learn From</h2>
+                </div>
+                <span id="resultsCount">8 people</span>
+            </div>
+            <div class="people-grid" id="peopleGrid"></div>
+            <div class="explore-empty" id="exploreEmpty">
+                <div>⌕</div>
+                <h3>No matches found</h3>
+                <p>Try another keyword or category.</p>
+                <button id="resetExplore">Clear Filters</button>
+            </div>
+        </section>
+
+        <section class="requests-section">
+            <div>
+                <span class="section-label">YOUR ACTIVITY</span>
+                <h2>My Exchange Requests</h2>
+                <p>Keep track of the people you want to connect with.</p>
+            </div>
+            <div id="myRequests" class="requests-list"></div>
+        </section>
+    </main>
+    <div class="profile-modal" id="profileModal">
+        <div class="profile-modal-card">
+            <button class="modal-close" id="closeModal">×</button>
+            <div id="profileDetails"></div>
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="index.html" class="logo">Skill<span>Bridge.</span></a>
+        <p>Exchange knowledge. Build connections. Grow together.</p>
+        <span>© 2026 SkillBridge. All rights reserved.</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

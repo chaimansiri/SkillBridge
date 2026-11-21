@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | SkillBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-page">
+
+    <aside class="admin-sidebar">
+        <a href="index.html" class="admin-logo">Skill<span>Bridge</span></a>
+        <p class="admin-label">ADMINISTRATION</p>
+
+        <nav class="admin-navigation">
+            <a href="#overview" class="active">▦ Overview</a>
+            <a href="#users">♙ Users</a>
+            <a href="#skills">✦ Skills</a>
+            <a href="#activity">◷ Activity</a>
+            <a href="dashboard.html">↗ User Dashboard</a>
+        </nav>
+
+        <div class="admin-sidebar-bottom">
+            <div class="admin-profile">
+                <div class="admin-avatar">A</div>
+                <div>
+                    <strong>Administrator</strong>
+                    <span>Admin Panel</span>
+                </div>
+            </div>
+            <button id="adminLogout">Log out</button>
+        </div>
+    </aside>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div>
+                <p class="admin-breadcrumb">Pages / Overview</p>
+                <h1>Admin Dashboard</h1>
+            </div>
+            <span class="admin-status"><i></i> Control Center</span>
+        </header>
+
+        <section id="overview">
+
+            <div class="admin-welcome">
+                <div>
+                    <p>WELCOME BACK</p>
+                    <h2>Platform Overview</h2>
+                    <span>Monitor your SkillBridge community and activity.</span>
+                </div>
+                <div class="welcome-decoration">✦</div>
+            </div>
+
+            <div class="admin-stats">
+
+                <article class="stat-card">
+                    <div class="stat-icon purple">♙</div>
+                    <p>Total Users</p>
+                    <h2 id="totalUsers">0</h2>
+                    <span>Registered accounts</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon blue">✦</div>
+                    <p>Total Skills</p>
+                    <h2 id="totalSkills">0</h2>
+                    <span>Listed skill entries</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon pink">✉</div>
+                    <p>Messages</p>
+                    <h2 id="totalMessages">0</h2>
+                    <span>Saved messages</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon green">♧</div>
+                    <p>Notifications</p>
+                    <h2 id="totalNotifications">0</h2>
+                    <span>Saved notifications</span>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="users" class="admin-section">
+            <div class="admin-section-heading">
+                <div>
+                    <h2>User Management</h2>
+                    <p>View registered accounts on this browser.</p>
+                </div>
+                <input type="search" id="userSearch" placeholder="Search users...">
+            </div>
+
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Interests</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody"></tbody>
+                </table>
+            </div>
+            <p id="usersEmpty" class="admin-empty hidden">No users found.</p>
+        </section>
+
+        <section id="skills" class="admin-section">
+            <div class="admin-section-heading">
+                <div>
+                    <h2>Skills Overview</h2>
+                    <p>Skills saved in users' learning dashboards.</p>
+                </div>
+            </div>
+
+            <div id="skillsOverview" class="skills-overview"></div>
+        </section>
+
+        <section id="activity" class="admin-section">
+            <div class="admin-section-heading">
+                <div>
+                    <h2>Platform Activity</h2>
+                    <p>Recent account registration activity.</p>
+                </div>
+            </div>
+
+            <div id="activityList" class="activity-list"></div>
+        </section>
+
+        <footer class="admin-footer">
+            SkillBridge Admin Panel · Frontend Prototype
+        </footer>
+
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

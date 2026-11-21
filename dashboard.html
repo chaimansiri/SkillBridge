@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SkillBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body class="Dashboard-body"> 
+    <aside class="sidebar">
+
+        <a href="index.html" class="logo">
+            Skill<span>Bridge.</span>
+        </a>
+        <p class="sidebar-label">MAIN MENU</p>
+        <nav class="sidebar-nav">
+            <a href="#overview" class="active">▦ Overview</a>
+            <a href="#my-skills">✦ My Skills</a>
+            <a href="#learning">◎ Learning Goals</a>
+            <a href="#connections">♧ Connections</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <div class="sidebar-bottom">
+            <a href="index.html">← Back to Website</a>
+            <button id="dashboardLogout">Log Out ↗</button>
+        </div>
+    </aside>
+    <main class="dashboard-main" id="overview">
+
+        <header class="dashboard-header">
+            <div>
+                <span class="section-label">YOUR PERSONAL SPACE</span>
+                <h1>Welcome back, <span id="userName">Learner</span>!</h1>
+                <p>Keep learning, keep growing.</p>
+            </div>
+            <div class="profile-avatar" id="userAvatar">U</div>
+        </header>
+
+        <section class="dashboard-stats">
+
+            <div class="stat-card">
+                <span class="stat-icon">✦</span>
+                <p>Skills Offered</p>
+                <h2 id="offeredCount">0</h2>
+                <span>Skills you can teach</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">◎</span>
+                <p>Learning Goals</p>
+                <h2 id="learningCount">0</h2>
+                <span>Skills you want to learn</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">♧</span>
+                <p>Connections</p>
+                <h2 id="connectionCount">0</h2>
+                <span>Your community</span>
+            </div>
+        </section>
+
+        <section class="dashboard-section" id="my-skills">
+
+            <div class="dashboard-section-heading">
+                <div>
+                    <span class="section-label">SHARE YOUR KNOWLEDGE</span>
+                    <h2>My Skills</h2>
+                    <p>Skills that you can teach to others.</p>
+                </div>
+            </div>
+            <form id="addSkillForm" class="add-skill-form">
+
+                <input
+                    type="text" id="skillInput" placeholder="Enter a skill (e.g. HTML, Design...)" required>
+                <button type="submit">+ Add Skill</button>
+            </form>
+            <div class="dashboard-list" id="mySkillsList"></div>
+        </section>
+
+        <section class="dashboard-section" id="learning">
+
+            <div class="dashboard-section-heading">
+                <div>
+                    <span class="section-label">KEEP DISCOVERING</span>
+                    <h2>Skills I Want to Learn</h2>
+                    <p>What would you like to learn next?</p>
+                </div>
+            </div>
+            <form id="addLearningForm" class="add-skill-form">
+
+                <input type="text" id="learningInput" placeholder="Enter a learning goal..." required >
+                <button type="submit">+ Add Goal</button>
+            </form>
+            <div class="dashboard-list" id="learningList"></div>
+        </section>
+
+        <section class="dashboard-section" id="connections">
+
+            <div class="dashboard-section-heading">
+                <div>
+                    <span class="section-label">YOUR COMMUNITY</span>
+                    <h2>My Connections</h2>
+                    <p>Your learning journey is better together.</p>
+                </div>
+            </div>
+            <div class="connection-empty">
+                <div>♧</div>
+                <h3>Your network starts here</h3>
+                <p>Discover people with skills you want to learn.</p>
+                <a href="index.html#skills">Explore Skills →</a>
+            </div>
+        </section>
+        <footer class="dashboard-footer">
+            © 2026 SkillBridge. Keep growing together.
+        </footer>
+    </main>
+</body>
+</html>

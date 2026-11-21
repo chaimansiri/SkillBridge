@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | SkillBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="notification.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="notifications-page">
+
+    <nav class="notification-navbar">
+        <a href="index.html" class="notification-logo">Skill<span>Bridge</span></a>
+
+        <div class="notification-links">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore Skills</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="messages.html">Messages</a>
+            <a href="notifications.html" class="active">Notifications</a>
+            <a href="settings.html">Settings</a>
+        </div>
+
+        <button id="logoutBtn">Log out</button>
+    </nav>
+
+    <main class="notification-container">
+
+        <header class="notification-heading">
+            <div>
+                <p class="notification-eyebrow">STAY UPDATED</p>
+                <h1>Your <span>Notifications</span></h1>
+                <p>Keep track of everything happening in your learning journey.</p>
+            </div>
+
+            <div class="notification-summary">
+                <div class="summary-icon">♧</div>
+                <div>
+                    <strong id="unreadCount">0</strong>
+                    <span>Unread notifications</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="notification-panel">
+
+            <div class="notification-toolbar">
+                <div>
+                    <h2>All Notifications</h2>
+                    <p>Updates and activities from SkillBridge</p>
+                </div>
+
+                <button id="markAllRead">Mark all as read</button>
+            </div>
+
+            <div class="notification-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="unread">Unread</button>
+                <button class="filter-btn" data-filter="read">Read</button>
+            </div>
+
+            <div id="notificationsList" class="notifications-list"></div>
+
+            <div id="emptyNotifications" class="empty-notifications hidden">
+                <div>♧</div>
+                <h3>No notifications yet</h3>
+                <p>When something happens, you will see it here.</p>
+            </div>
+
+            <div class="notification-footer">
+                <button id="clearAll">Clear all notifications</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="notification.js"></script>
+</body>
+</html>

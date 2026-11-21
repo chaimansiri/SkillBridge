@@ -1,0 +1,353 @@
+
+/* =========================================
+   SKILLBRIDGE - RESPONSIVE DESIGN
+   Works with desktop, tablet and mobile
+========================================= */
+
+/* ---------- GLOBAL RESET ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container,
+.main-container,
+.dashboard-container {
+    width: min(1200px, 92%);
+    margin-inline: auto;
+}
+
+/* ---------- RESPONSIVE GRIDS ---------- */
+
+.skills-grid,
+.profiles-grid,
+.cards-grid,
+.stats-grid,
+.dashboard-grid {
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 230px), 1fr)
+    );
+}
+
+/* ---------- TABLES ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container,
+.table-wrapper,
+.admin-table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+td,
+th {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- FORMS ---------- */
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+select,
+textarea,
+button {
+    min-height: 40px;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav,
+.navbar {
+    max-width: 100%;
+}
+
+.navbar a,
+nav a {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- DASHBOARD ---------- */
+
+.dashboard-content,
+.main-content,
+.page-content {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.dashboard-card,
+.stat-card,
+.card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- MESSAGES ---------- */
+
+.messages-container,
+.chat-container,
+.messages-layout {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.messages-sidebar,
+.chat-sidebar,
+.chat-panel {
+    min-width: 0;
+}
+
+.message,
+.message-content {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- NOTIFICATIONS ---------- */
+
+.notification-card,
+.notification-item {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- SETTINGS ---------- */
+
+.settings-container,
+.settings-content,
+.profile-preview {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* ---------- ADMIN ---------- */
+
+.admin-container,
+.admin-content,
+.admin-main {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* =========================================
+   TABLET - 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 4vw, 2rem);
+    }
+
+    .container,
+    .main-container,
+    .dashboard-container {
+        width: 94%;
+    }
+
+    nav,
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navbar a,
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .dashboard-grid,
+    .stats-grid,
+    .skills-grid,
+    .profiles-grid,
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .messages-layout,
+    .messages-container {
+        grid-template-columns: 1fr;
+    }
+
+    .messages-sidebar,
+    .chat-sidebar {
+        max-height: 260px;
+        overflow-y: auto;
+    }
+
+    .settings-container {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   MOBILE - 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .container,
+    .main-container,
+    .dashboard-container {
+        width: 92%;
+    }
+
+    nav,
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a,
+    nav a {
+        padding: 7px 0;
+    }
+
+    .dashboard-grid,
+    .stats-grid,
+    .skills-grid,
+    .profiles-grid,
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    button,
+    .btn {
+        max-width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    .messages-sidebar,
+    .chat-sidebar {
+        max-height: 220px;
+    }
+
+    .notification-card,
+    .notification-item,
+    .dashboard-card,
+    .stat-card {
+        padding: 14px;
+    }
+
+    .profile-preview {
+        width: 100%;
+    }
+
+    .admin-table-container,
+    .table-container,
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 550px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE - 360px
+========================================= */
+
+@media (max-width: 360px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container,
+    .main-container,
+    .dashboard-container {
+        width: 94%;
+    }
+
+    button,
+    .btn {
+        padding: 10px 12px;
+    }
+}

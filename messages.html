@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | SkillBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="messages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="messages-page">
+
+    <nav class="messages-navbar">
+        <a href="index.html" class="messages-logo">Skill<span>Bridge</span></a>
+
+        <div class="messages-nav-links">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore Skills</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="messages.html" class="active">Messages</a>
+            <a href="settings.html">Settings</a>
+        </div>
+
+        <div class="messages-user">
+            <span id="userName">User</span>
+            <button id="logoutBtn">Log out</button>
+        </div>
+    </nav>
+
+    <main class="messages-container">
+
+        <section class="messages-heading">
+            <div>
+                <p class="messages-eyebrow">STAY CONNECTED</p>
+                <h1>Your <span>Messages</span></h1>
+                <p>Share ideas, ask questions and learn together.</p>
+            </div>
+            <div class="messages-total">
+                <span class="online-dot"></span>
+                Your learning community
+            </div>
+        </section>
+
+        <section class="chat-layout">
+
+            <aside class="chat-sidebar">
+                <div class="sidebar-heading">
+                    <h2>Conversations</h2>
+                    <span id="conversationCount">0</span>
+                </div>
+
+                <div class="contact-search">
+                    <span>⌕</span>
+                    <input type="text" id="contactSearch" placeholder="Search conversations...">
+                </div>
+
+                <div id="contactsList" class="contacts-list"></div>
+            </aside>
+
+            <section class="chat-main">
+
+                <div id="emptyChat" class="empty-chat">
+                    <div class="empty-chat-icon">✉</div>
+                    <h2>Your conversations start here</h2>
+                    <p>Select someone from the list to start chatting.</p>
+                </div>
+
+                <div id="activeChat" class="active-chat hidden">
+
+                    <header class="chat-header">
+                        <div class="chat-contact-info">
+                            <div class="contact-avatar" id="chatAvatar">A</div>
+                            <div>
+                                <h3 id="chatName">Contact Name</h3>
+                                <p id="chatSkill">Skill</p>
+                            </div>
+                        </div>
+                        <span class="chat-status">
+                            <span class="online-dot"></span>
+                            Demo contact
+                        </span>
+                    </header>
+
+                    <div id="messagesList" class="messages-list"></div>
+
+                    <form id="messageForm" class="message-form">
+                        <input
+                            type="text"
+                            id="messageInput"
+                            placeholder="Write your message..."
+                            maxlength="500"
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" id="sendBtn">Send ↗</button>
+                    </form>
+
+                    <p class="chat-disclaimer">
+                        Demo conversation — messages are saved in this browser only.
+                    </p>
+
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="messages.js"></script>
+</body>
+</html>
